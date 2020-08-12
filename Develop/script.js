@@ -1,16 +1,18 @@
 function localstorage (ui) {
-  let custValue = localstorage.getItem(ui)
-  if (custValue) {
+  var value = localstorage.getItem(ui)
+  if (value) {
     $("#text{ui}").text(custValue)
 
 }}
 
-$( document ).ready(function(){
+window.addEventListener("load", function(){
+  console.log("hi")
   $("#currentDay").text(moment().format("MMMM Do YYYY"))
-  for (var i = 9; i < 18; i++) {
-    
-    const row = $<`div data-time=${i} id='${i}'
-    class ="row>`}
+  $("#hour").text(moment().format("HH"))
 
-
+  let button9 = document.getElementById("btn9")
+  button9.addEventListener("click", function(){
+    console.log(button9)
+  })
 })
+
