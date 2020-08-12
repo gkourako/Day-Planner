@@ -1,6 +1,4 @@
 
-
-
 $("#09").children(".description").val(localStorage.getItem("09"))
 $("#10").children(".description").val(localStorage.getItem("10"))
 $("#11").children(".description").val(localStorage.getItem("11"))
