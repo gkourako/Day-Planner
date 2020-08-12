@@ -27,12 +27,14 @@ function changeColor() {
   var currentTime = moment().format("HH")
   $(".hour-block").each(function(){
     var txtH = $(this).attr("id")
-    if (){
+    if (txtH < currentTime){ 
+      $(this).addClass("past")
 
-    }else if(){
+    }else if(txtH > currentTime){
+      $(this).addClass("future")
 
     }else{
-      
+      $(this).addClass("present")
     }
 
   })
