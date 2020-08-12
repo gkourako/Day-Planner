@@ -1,18 +1,41 @@
-function localstorage (ui) {
-  var value = localstorage.getItem(ui)
-  if (value) {
-    $("#text{ui}").text(custValue)
 
-}}
+
+
+$("#09").children(".description").val(localStorage.getItem("09"))
+$("#10").children(".description").val(localStorage.getItem("10"))
+$("#11").children(".description").val(localStorage.getItem("11"))
+$("#12").children(".description").val(localStorage.getItem("12"))
+$("#13").children(".description").val(localStorage.getItem("13"))
+$("#14").children(".description").val(localStorage.getItem("14"))
+$("#15").children(".description").val(localStorage.getItem("15"))
+$("#16").children(".description").val(localStorage.getItem("16"))
+$("#17").children(".description").val(localStorage.getItem("17"))
 
 window.addEventListener("load", function(){
   console.log("hi")
   $("#currentDay").text(moment().format("MMMM Do YYYY"))
   $("#hour").text(moment().format("HH"))
 
-  let button9 = document.getElementById("btn9")
-  button9.addEventListener("click", function(){
-    console.log(button9)
+  $(".saveBtn").on("click", function(){
+    var textDescription = $(this).siblings(".description").val()
+    var key = $(this).parent().attr("id")
+    localStorage.setItem(key, textDescription)
   })
 })
 
+function changeColor() {
+  var currentTime = moment().format("HH")
+  $(".hour-block").each(function(){
+    var txtH = $(this).attr("id")
+    if (){
+
+    }else if(){
+
+    }else{
+      
+    }
+
+  })
+
+}
+changeColor()
